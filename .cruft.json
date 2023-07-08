@@ -1,0 +1,20 @@
+{
+  "template": "https://github.com/gaganpreet/fastapi-starter",
+  "commit": "56cafc4c517416b2f3972d0dc192c8abb0556fa5",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "User Item Management",
+      "project_slug": "user-item-management",
+      "backend_port": "8196",
+      "frontend_port": "3196",
+      "_copy_without_render": [
+        "*node_modules",
+        "*src/App.tsx",
+        "*pages/ProfileEdit.tsx"
+      ],
+      "_template": "https://github.com/gaganpreet/fastapi-starter"
+    }
+  },
+  "directory": null
+}

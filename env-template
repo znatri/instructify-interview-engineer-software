@@ -1,0 +1,6 @@
+POSTGRES_PASSWORD=Password123!
+POSTGRES_DB=app
+DATABASE_URL=postgresql://postgres:admin@postgres/app
+TEST_DATABASE_URL=postgresql://postgres:admin@postgres/apptest
+SECRET_KEY=thisisasecret
+BACKEND_CORS_ORIGINS='["http://localhost:3196","http://127.0.0.1:3196"]'

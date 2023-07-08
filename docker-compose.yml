@@ -1,0 +1,40 @@
+version: "3.9"
+
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:12
+    restart: always
+    env_file:
+      - .env
+    healthcheck:
+      test: pg_isready -U postgres
+      interval: 3s
+      timeout: 2s
+      retries: 3
+
+  backend:
+    container_name: backend
+    build:
+      context: backend
+    ports:
+      - "8196:8196"
+    env_file: .env
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  frontend:
+    container_name: frontend
+    build:
+      context: frontend
+    ports:
+      - "3196:80"
+    volumes:
+      - ./frontend:/app:delegated
+    environment:
+      - NODE_ENV=production
+
+volumes:
+  app-db-data:
+  root-home:
