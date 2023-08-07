@@ -146,3 +146,23 @@ Then you can run tests with this command:
 ```bash
 docker-compose run backend pytest --cov --cov-report term-missing
 ```
+
+## New Feature
+
+### Scope
+
+Add a new endpoint accessible via `/users/valid` which returns only "valid" users.
+
+For the sake of the interview, let's make up a definition of "valid" as follows:
+
+Valid: The email domain of the user is accessible via an HTTP request (e.g. for gmail, a GET / to gmail.com returns 200)
+
+### Testing
+
+Create some tests that verify the expected behavior.
+
+### Submit a Pull Request
+
+Submit a pull request back to the repo for evaluation.
+
+If anything goes wrong creating the pull request, zip up the files and send them to <anthony@assignguard.com>.
